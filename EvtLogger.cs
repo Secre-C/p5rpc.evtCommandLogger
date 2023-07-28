@@ -158,9 +158,9 @@ namespace p5rpc.evtCommandLogger
                         byte result = _evtFlagCheck.OriginalFunction(a1);
 
                         if ((command->SkipCommand & 1) != 0)
-                            utils.Log($"Command: {Encoding.ASCII.GetString(BitConverter.GetBytes(command->CommandType))} || Frame: {command->Frame:D4} || Duration: {command->Duration:D3} || ObjectId: {command->ObjectId:D2} || ForceSkipCommand -> {(command->SkipCommand & 1) != 0}", Color.LightBlue);
+                            utils.Log($"Command: {Encoding.ASCII.GetString(BitConverter.GetBytes(command->CommandType))} || Frame: {command->Frame:D4} || Duration: {command->Duration:D3} || ObjectId: {command->ObjectId:D2} || ForceSkipCommand -> {(result != 0 ? "Execute" : "Skip")}", Color.LightBlue);
                         else
-                            utils.Log($"Command: {Encoding.ASCII.GetString(BitConverter.GetBytes(command->CommandType))} || Frame: {command->Frame:D4} || Duration: {command->Duration:D3} || ObjectId: {command->ObjectId:D2} || ( {command->EvtFlagType} {utils.FlagConvert(command->EvtFlagType, command->EvtFlagId)} {conditionals[(int)command->EvtFlagConditionalType]} {command->EvtFlagValue} ) -> {result != 0}", Color.LightBlue);
+                            utils.Log($"Command: {Encoding.ASCII.GetString(BitConverter.GetBytes(command->CommandType))} || Frame: {command->Frame:D4} || Duration: {command->Duration:D3} || ObjectId: {command->ObjectId:D2} || ( {command->EvtFlagType} {utils.FlagConvert(command->EvtFlagType, command->EvtFlagId)} {conditionals[(int)command->EvtFlagConditionalType]} {command->EvtFlagValue} ) -> {(result != 0 ? "Execute" : "Skip")}", Color.LightBlue);
 
                         return result;
                     }, evtFlagCheckAdr).Activate();
