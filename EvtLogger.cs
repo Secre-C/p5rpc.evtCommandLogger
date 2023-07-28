@@ -29,7 +29,7 @@ namespace p5rpc.evtCommandLogger
         private IHook<EvtFlagCheck> _evtFlagCheck;
         public EvtLogger(IReloadedHooks hooks, IModLoader modLoader, Utils utils)
         {
-            utils.IScanner.AddMainModuleScan("48 89 5C 24 ?? 44 88 4C 24 ?? 44 88 44 24 ?? 55 56 57 41 54 41 55 41 56 41 57 48 83 EC 40", (result) =>
+            utils.IScanner.AddMainModuleScan("48 89 5C 24 ?? 44 88 4C 24 ?? 44 88 44 24 ?? 55 56 57 41 54 41 55 41 56 41 57 48 83 EC 40", (result) => // 0x140ec7fa0
             {
                 if (result.Found)
                 {
