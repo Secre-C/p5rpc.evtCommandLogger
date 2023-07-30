@@ -2,7 +2,7 @@
   "ModId": "p5rpc.evtLogger",
   "ModName": "P5R EVT Logger",
   "ModAuthor": "SecreC.",
-  "ModVersion": "1.0.2",
+  "ModVersion": "1.0.3",
   "ModDescription": "Logs Evt Objects and Commands when as game reads them.",
   "ModDll": "p5rpc.evtCommandLogger.dll",
   "ModIcon": "Preview.png",
@@ -10,15 +10,49 @@
   "ModR2RManagedDll64": "x64/p5rpc.evtCommandLogger.dll",
   "ModNativeDll32": "",
   "ModNativeDll64": "",
+  "Tags": [],
+  "CanUnload": false,
+  "HasExports": false,
   "IsLibrary": false,
   "ReleaseMetadataFileName": "p5rpc.evtCommandLogger.ReleaseMetadata.json",
-  "PluginData": {},
+  "PluginData": {
+    "GitHubDependencies": {
+      "IdToConfigMap": {
+        "Reloaded.Memory.SigScan.ReloadedII": {
+          "Config": {
+            "UserName": "Reloaded-Project",
+            "RepositoryName": "Reloaded.Memory.SigScan",
+            "UseReleaseTag": false,
+            "AssetFileName": "Mod.zip"
+          },
+          "ReleaseMetadataName": "Reloaded.Memory.SigScan.ReloadedII.ReleaseMetadata.json"
+        },
+        "reloaded.sharedlib.hooks": {
+          "Config": {
+            "UserName": "Sewer56",
+            "RepositoryName": "Reloaded.SharedLib.Hooks.ReloadedII",
+            "UseReleaseTag": true,
+            "AssetFileName": "reloaded.sharedlib.hooks.zip"
+          },
+          "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
+        }
+      }
+    },
+    "GitHubRelease": {
+      "UserName": "Secre-C",
+      "RepositoryName": "p5rpc.evtCommandLogger",
+      "UseReleaseTag": true,
+      "AssetFileName": "Mod.zip"
+    }
+  },
   "IsUniversalMod": false,
   "ModDependencies": [
     "Reloaded.Memory.SigScan.ReloadedII",
     "reloaded.sharedlib.hooks"
   ],
   "OptionalDependencies": [],
-  "SupportedAppId": [ "p5r.exe" ],
+  "SupportedAppId": [
+    "p5r.exe"
+  ],
   "ProjectUrl": ""
 }
